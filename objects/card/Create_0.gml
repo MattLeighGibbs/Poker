@@ -4,7 +4,11 @@
 suit = Suit.clubs
 value = Value.two
 
-function Card(st, val) constructor {
+should_draw = false
+
+function Card(st, val) {
     suit = st;
     value = val;
+	sprite_index = cardsprites
+	image_index =  ((Value.NUM) * suit) + value	
 }

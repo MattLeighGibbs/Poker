@@ -37,9 +37,11 @@ function InitDeck()
 	for (suit = 0; suit != Suit.NUM; suit++) { 
 		for (value = 0; value != Value.NUM; value++) {
             var crd = instance_create_layer(suit, value, "Instances", card);
-            crd.suit = suit;
-            crd.value = value;
+			crd.Card(suit, value)
+			
             array_push(cards, crd);
 		 }
 	}
+	randomize()
+	cards = array_shuffle(cards)
 }
